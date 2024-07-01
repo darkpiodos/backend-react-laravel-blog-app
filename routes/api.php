@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\TempImageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/blogs',[BlogController::class,'store']);
+Route::post('/save-temp-image',[TempImageController::class,'store']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

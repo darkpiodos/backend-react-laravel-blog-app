@@ -36,8 +36,8 @@ class BlogController extends Controller
         $blog = new Blog();
         $blog->title =$request->title;
         $blog->author =$request->author;
-      $blog->description = $request->description ?? null; // Handle nullable fields
-    $blog->shortDesc = $request->shortDesc ?? null; // Handle nullable fields
+        $blog->description = $request->description ?? null; // Handle nullable fields
+        $blog->shortDesc = $request->shortDesc ?? null; // Handle nullable fields
         $blog->save();
 
         return response()->json([
